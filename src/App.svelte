@@ -2,6 +2,7 @@
   import { onMount } from 'svelte'
   export let name
   export let message
+  
   onMount(async () => {
     let data = await (await fetch('/api')).json()
     message = data.msg
@@ -10,10 +11,12 @@
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <h2>{message}</h2>
-  <h3>Change me!</h3>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <h1>Ferdinand Salis<h1>
+  <p>Hello {name}!</p>
+  <section>
+    <h2>{message}</h2>
+    <h3>Change me!</h3>
+  </section>
 </main>
 
 <style>
